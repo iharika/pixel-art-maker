@@ -6,20 +6,6 @@
 
 var lastClicked, inputHeight, inputWidth;
 
-inputHeight = $("#input_height").val();
-inputWidth = $("#input_width").val();
-
-$("#btnSubmit").click(function (e) {
-    $('.grid').remove();
-    e.preventDefault();
-    inputHeight = $("#input_height").val();
-    inputWidth = $("#input_width").val();
-    var returnedGrid = ownGrid(inputHeight, inputWidth);
-    document.body.appendChild(returnedGrid);
-
-
-});
-
 function ownGrid(rows, cols) {
     var grid = document.createElement('table');
     grid.className = 'grid';
@@ -31,3 +17,15 @@ function ownGrid(rows, cols) {
     }
     return grid;
 }
+
+$("#btnSubmit").click(function (e) {
+    e.preventDefault();
+    // Clear the grid on button click
+    $('.grid').remove();
+    inputHeight = $("#input_height").val();
+    inputWidth = $("#input_width").val();
+    var returnedGrid = ownGrid(inputHeight, inputWidth);
+    document.body.appendChild(returnedGrid);
+
+
+});
