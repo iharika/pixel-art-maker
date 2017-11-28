@@ -4,7 +4,7 @@
 // When size is submitted by the user, call makeGrid()
 
 
-var lastClicked, inputHeight, inputWidth;
+var inputHeight, inputWidth;
 
 function makeGrid(rows, cols) {
     if (rows > 500 || cols > 500 || rows <= 0 || cols <= 0) {
@@ -28,6 +28,12 @@ function makeGrid(rows, cols) {
     }
 }
 
+function changeColour(oneCell) {
+    var pickedColor = $('#colorPicker').val();
+    oneCell.css("background-color", pickedColor);
+
+}
+
 $("#btnSubmit").click(function (e) {
     e.preventDefault();
     // Clear the grid on button click
@@ -40,8 +46,9 @@ $("#btnSubmit").click(function (e) {
 
 });
 
-function changeColour(oneCell) {
-    var pickedColor = $('#colorPicker').val();
-    oneCell.css("background-color", pickedColor);
+$("#btnReset").click(function() {
+    $('.grid').remove();
+    $('#colorPicker').val('#2dd0e5');
+});
 
-}
+
