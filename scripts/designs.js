@@ -4,7 +4,27 @@
 // When size is submitted by the user, call makeGrid()
 
 
-var inputHeight, inputWidth;
+var inputHeight, inputWidth, pickedColor;
+
+pickedColor = $('#colorPicker').val();
+$('#colorPicker').on('change', function () {
+    pickedColor = $('#colorPicker').val();
+});
+$('.predefined-colors').on('click', 'div', function (evt) {
+    pickedColor = $(evt.target).css("background-color");
+    var hex = rgb2hex(pickedColor);
+    $('#colorPicker').val(hex);
+});
+
+function rgb2hex(rgb) {
+    rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+    return (rgb && rgb.length === 4) ? "#" +
+        ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
+        ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
+        ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : '';
+}
+
+
 
 function makeGrid(rows, cols) {
     if (rows > 500 || cols > 500 || rows <= 0 || cols <= 0) {
@@ -39,41 +59,40 @@ $("#btnSubmit").click(function (e) {
 
 });
 
-$("#btnReset").click(function() {
+$("#btnReset").click(function () {
     $('.grid').remove();
     $('#colorPicker').val('#FF3377');
 });
 
 function dragAndDrawFeature() {
-    
-    $('td').on('click', function() {
+
+    let mouseIsDown = false;
+    $('td').on('click', function () {
         let color = $('#colorPicker').val();
         $(this).css('backgroundColor', color);
     });
 
-    let mouseIsDown = false;
 
-    $('td').on('mousemove', function() {
+    $('td').on('mousemove', function () {
         if (mouseIsDown) {
             let color = $('#colorPicker').val();
             $(this).css('backgroundColor', color);
         }
     });
 
-    $('td').on('mousedown', function() {
+    $('td').on('mousedown', function () {
         mouseIsDown = true;
     });
 
-    $('td').on('mouseup', function() {
+    $('td').on('mouseup', function () {
         mouseIsDown = false;
     });
 
-   
+
 
     // Double click to remove color from the cell     
-    $('td').on('dblclick', function() {
+    $('td').on('dblclick', function () {
         $(this).css('background', 'white');
-    })
+    });
 
 }
-
