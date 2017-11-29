@@ -8,26 +8,34 @@
 </head>
 
 <body>
-    <h1>Lab: Pixel Art Maker</h1>
+                
+    <div class="container">
+            <h1>Lab: Pixel Art Maker</h1>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="input_height" name="height"  value=""> Grid Width:
-        <input type="number" id="input_width" name="width"  value="">
-        <input type="submit" id="btnSubmit">
-        <input type="reset" id="btnReset">
+            <h2>Choose Grid Size</h2>
         
-    </form>
+        
+            <form id="sizePicker">
+                <p>Grid Height:<input type="number" id="input_height" name="height" value="10">Grid Width:
+<input type="number" id="input_width" name="width" value="10">
+                <input type="submit" id="btnSubmit" value="Create">
+                <input type="reset" id="btnReset" value=" Reset "></p>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker" value="#2dd0e5">
+            </form>
+        
+        
+            <h2>Set Custom Color</h2>
+            <input type="color" id="colorPicker" value="#2dd0e5">
+        
+        
+            <h2>Design Canvas</h2>
+            <table id="pixel_canvas"></table>
 
-    <h2>Design Canvas</h2>
-    <table id="pixel_canvas"></table>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="scripts/designs.js"></script>
+
+    </div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="scripts/designs.js"></script>
     
 
 </body>

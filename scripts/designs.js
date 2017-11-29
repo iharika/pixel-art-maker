@@ -41,7 +41,7 @@ $("#btnSubmit").click(function (e) {
     inputHeight = $("#input_height").val();
     inputWidth = $("#input_width").val();
     var returnedGrid = makeGrid(inputHeight, inputWidth);
-    document.body.appendChild(returnedGrid);
+    $('#pixel_canvas').append(returnedGrid);
 
 
 });
