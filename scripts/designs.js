@@ -19,20 +19,13 @@ function makeGrid(rows, cols) {
             var tr = grid.appendChild(document.createElement('tr'));
             for (var c = 0; c < cols; ++c) {
                 var cell = tr.appendChild(document.createElement('td'));
-                cell.addEventListener('click', function () {
-                    changeColour($(this));
-                });
             }
         }
         return grid;
     }
 }
 
-function changeColour(oneCell) {
-    var pickedColor = $('#colorPicker').val();
-    oneCell.css("background-color", pickedColor);
 
-}
 
 $("#btnSubmit").click(function (e) {
     e.preventDefault();
@@ -42,13 +35,45 @@ $("#btnSubmit").click(function (e) {
     inputWidth = $("#input_width").val();
     var returnedGrid = makeGrid(inputHeight, inputWidth);
     $('#pixel_canvas').append(returnedGrid);
-
+    dragAndDrawFeature();
 
 });
 
 $("#btnReset").click(function() {
     $('.grid').remove();
-    $('#colorPicker').val('#2dd0e5');
+    $('#colorPicker').val('#FF3377');
 });
 
+function dragAndDrawFeature() {
+    
+    $('td').on('click', function() {
+        let color = $('#colorPicker').val();
+        $(this).css('backgroundColor', color);
+    });
+
+    let mouseIsDown = false;
+
+    $('td').on('mousemove', function() {
+        if (mouseIsDown) {
+            let color = $('#colorPicker').val();
+            $(this).css('backgroundColor', color);
+        }
+    });
+
+    $('td').on('mousedown', function() {
+        mouseIsDown = true;
+    });
+
+    $('td').on('mouseup', function() {
+        mouseIsDown = false;
+    });
+
+   
+
+    // Double click to remove color from the cell     
+    $('td').on('dblclick', function() {
+        $(this).css('background', 'white');
+    })
+
+}
 
