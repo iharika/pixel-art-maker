@@ -1,10 +1,6 @@
 body {
     text-align: center;
     font-family: "Comic Sans MS";
-    background: #56ab2f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
 }
 
 table {
@@ -79,13 +75,6 @@ h2 {
     padding: 3%;
     width: 80%;
     height: auto;
-    background: #000428;  
-    background: -webkit-linear-gradient(to left, #004e92, #000428);  
-    background: linear-gradient(to left, #004e92, #000428);
-
-    
-    
-    
     box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5);
     border: 7px solid #0d47a1;
     border-radius: 25px;
