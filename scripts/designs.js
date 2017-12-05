@@ -16,6 +16,16 @@ $('.predefined-colors').on('click', 'div', function (evt) {
     $('#colorPicker').val(hex);
 });
 
+$(document).ready(function(){
+    $('.grid').remove();
+    inputHeight = $("#input_height").val();
+    inputWidth = $("#input_width").val();
+    var returnedGrid = makeGrid(inputHeight, inputWidth);
+    $('#pixel_canvas').append(returnedGrid);
+    dragAndDrawFeature();
+});
+
+
 function rgb2hex(rgb) {
     rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
     return (rgb && rgb.length === 4) ? "#" +
@@ -27,8 +37,8 @@ function rgb2hex(rgb) {
 
 
 function makeGrid(rows, cols) {
-    if (rows > 500 || cols > 500 || rows <= 0 || cols <= 0) {
-        alert("Please enter valid numbers. Allowed values are from 1 to 500");
+    if (rows > 100 || cols > 100 || rows <= 0 || cols <= 0) {
+        alert("Please enter valid numbers. Value should be less than or equal to 100");
         $('#input_height').val('');
         $('#input_width').val('');
         return;
@@ -45,9 +55,7 @@ function makeGrid(rows, cols) {
     }
 }
 
-
-
-$("#btnSubmit").click(function (e) {
+function create(e) {
     e.preventDefault();
     // Clear the grid on button click
     $('.grid').remove();
@@ -56,12 +64,20 @@ $("#btnSubmit").click(function (e) {
     var returnedGrid = makeGrid(inputHeight, inputWidth);
     $('#pixel_canvas').append(returnedGrid);
     dragAndDrawFeature();
+    $('#colorPicker').val('#FF3377');
+    
+
+}
+
+$("#btnSubmit").click(function (e) {
+    create(e);
 
 });
 
-$("#btnReset").click(function () {
-    $('.grid').remove();
-    $('#colorPicker').val('#FF3377');
+
+
+$("#btnReset").click(function (e) {
+    create(e);    
 });
 
 function dragAndDrawFeature() {
@@ -96,3 +112,10 @@ function dragAndDrawFeature() {
     });
 
 }
+
+
+$(".eraser").click(function() {
+    $('#colorPicker').val('#FFFFFF');
+    
+});
+

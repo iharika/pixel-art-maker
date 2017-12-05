@@ -5,43 +5,71 @@
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="main_container">
         <h1>Lab: Pixel Art Maker</h1>
 
-        <h2>Choose Grid Size</h2>
 
 
-        <form id="sizePicker">
-            <p>Grid Height:
-                <input type="number" id="input_height" name="height" value="10">Grid Width:
-                <input type="number" id="input_width" name="width" value="10">
-                <input type="submit" id="btnSubmit" value="Create">
-                <input type="reset" id="btnReset" value=" Reset ">
-            </p>
+        <div class="container">
 
-        </form>
+            <h2>Choose Grid Size</h2>
 
-        <h2>Pick A Color</h2>
-        <div class="predefined-colors">
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
+            <form id="sizePicker">
+                <p>Grid Height:
+                    <input type="number" id="input_height" name="height" value="50">
+                    <br>
+                    <br>Grid Width:&nbsp;
+                    <input type="number" id="input_width" name="width" value="100">
+                    <br>
+                    <br>
+                    <input type="submit" id="btnSubmit" value="Create">
+                    <input type="reset" id="btnReset" value=" Reset ">
+                </p>
+
+            </form>
+
+            <h2>Pick A Color</h2>
+            <div class="predefined-colors">
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+
+            <h2>Set Custom Color</h2>
+            <input type="color" id="colorPicker" value="#FF3377" align="center">
+            <hr>
+
+            <div class="eraser">
+                <img class="eraserIcon" src="images/eraser.png" alt="Eraser icon">
+                <p class="eraserText">Eraser</p>
+            </div>
+            <hr>
+            <div class="instructions">
+                <h4> Instructions: </h4>
+                <ol>
+                    <li>Choose predefined colour OR pick custom colour.</li>
+                    <li>Single click to fill each pixel OR click and drag to fill the pixels.</li>
+                    <li>Double click on single pixel to delete the filled colour.</li>
+                    <li>Pick 'Eraser' to erase the colour in pixels.</li>
+                    
+                </ol>
+            </div>
+
+
         </div>
-
-        <h2>Or Set Custom Color</h2>
-        <input type="color" id="colorPicker" value="#FF3377">
-
-
-        <h2>Design Canvas</h2>
-        <table id="pixel_canvas"></table>
+        <div class='grid_container'>
+            <table id="pixel_canvas"></table>
+        </div>
     </div>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="scripts/designs.js"></script>

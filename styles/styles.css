@@ -1,6 +1,6 @@
 body {
-    text-align: center;
-    font-family: "Comic Sans MS";
+    /* text-align: center; */
+    font-family: "Optima";
 }
 
 table {
@@ -8,13 +8,13 @@ table {
     margin: 0 auto;
 }
 
-tr {
-    height: 20px;
+/* tr {
+     height: 20px; 
 }
 
 td {
-    width: 20px;
-}
+     width: 20px; 
+} */
 
 input[type=number] {
     width: 5em;
@@ -25,16 +25,17 @@ input[type=number] {
 }
 
 input[type=color] {
-    background: #0b4cad; 
-    border: none;
+    background: #ffffff; 
+    border: 2;
     border-radius: 5px;
-    width: 40px;
+    width: 30px;
     height: 25px;
     cursor: pointer;    
     -webkit-appearance: none;
     background-color: none;
     margin-bottom: 18px;
-    border-color: #0b4cad;
+    border-color: #cbcbcb;
+    
   }
 
 .grid {
@@ -44,8 +45,8 @@ input[type=color] {
 
 .grid td {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border: 1px solid rgb(0, 0, 0);
     text-align: center;
     font-size: 13px;
@@ -57,47 +58,56 @@ input[type=color] {
 }
 
 h1 {
-    font-weight: 700;
-    color: #F9E609;
-    font-size: 70px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
     margin: 10px;
     -webkit-margin-after: 0.7em;
+    text-align: center; 
+    margin: 0 auto;
+    padding: 0.5%;
+    background-color: rgb(78, 74, 74);
+  
+    /* border-radius: 25px; */
 }
 
 h2 {
     
-    color: #F4DF09;
-    margin: 15px;
+    color: rgb(94, 93, 91);
 }
 
 .container {
-    margin: 0 auto;
-    padding: 3%;
-    width: 80%;
-    height: auto;
-    box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5);
-    border: 7px solid #0d47a1;
-    border-radius: 25px;
+    padding: 1%;
+    width: 13%;
+    height: 80%;
+    /* box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5); */
+    border: 1px solid #989ea8;
+    /* border-radius: 25px; */
+    float: left;
+    text-align: left;
+
 }
 
 #sizePicker {
-    color: #CFEE1B;
+    /* color: #CFEE1B; */
     font-size: 18px;
     
 }
 
 #btnSubmit, #btnReset  {
-    background-color: rgb(20, 145, 194); 
+    background-color: rgb(115, 118, 119); 
     border: 2px solid white;
     color: white;
     padding: 10px 15px;
     text-align: center;
     display: inline-block;
     font-size: 18px;
-    font-family: "comic sans MS";
+    font-family: "Optima";
     cursor: pointer;
     border-radius: 8px;
     margin: 5px;
+    /* box-shadow: inset 2px 3px 111px 16px rgba(145,150,153,0.98); */
+    
     
 }
 
@@ -118,9 +128,9 @@ h2 {
   }
   .predefined-colors > div {
     display: inline-block;
-    border: 3px solid #0b4cad;
+    border: 3px solid #989ea8;
     border-radius: 5px;
-    width: 40px;    
+    width: 20px;    
     height: 20px;
   }
   /* Predefined colors set */
@@ -146,3 +156,49 @@ h2 {
   .predefined-colors .color:nth-child(7) {
     background: #917bf5;
   }
+
+  .main_container {
+      width: 100%;
+  }
+
+  .grid_container {
+    /* box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5); */
+    /* border-radius: 25px; */
+margin-left: 15%;
+/* padding-top: 2%; */
+
+  }
+
+.eraserIcon {
+ float: left;
+ width: 50px;
+ height: 50px;
+ cursor: pointer;
+ 
+}
+
+.eraserText {
+    /* float: right; */
+    font-size: 25px;
+    padding-left: 2.5em;
+    color: rgb(94, 93, 91);
+    cursor: pointer;
+
+}
+
+.instructions {
+    font-size: 14px;
+}
+
+ol {
+    padding: 1px;
+}
+
+.eraserIcon:hover, .eraserText:hover {
+    color: rgb(104, 208, 94);
+    transform: scale(1.2);
+}
+
+h4 {
+    margin-bottom: 0px;
+}
