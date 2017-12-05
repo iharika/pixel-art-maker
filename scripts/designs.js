@@ -16,7 +16,7 @@ $('.predefined-colors').on('click', 'div', function (evt) {
     $('#colorPicker').val(hex);
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.grid').remove();
     inputHeight = $("#input_height").val();
     inputWidth = $("#input_width").val();
@@ -65,7 +65,7 @@ function create(e) {
     $('#pixel_canvas').append(returnedGrid);
     dragAndDrawFeature();
     $('#colorPicker').val('#FF3377');
-    
+
 
 }
 
@@ -77,7 +77,7 @@ $("#btnSubmit").click(function (e) {
 
 
 $("#btnReset").click(function (e) {
-    create(e);    
+    create(e);
 });
 
 function dragAndDrawFeature() {
@@ -114,8 +114,7 @@ function dragAndDrawFeature() {
 }
 
 
-$(".eraser").click(function() {
+$(".eraser").click(function () {
     $('#colorPicker').val('#FFFFFF');
-    
-});
 
+});
