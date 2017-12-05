@@ -1,10 +1,6 @@
 body {
-    text-align: center;
-    font-family: "Comic Sans MS";
-    background: #56ab2f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    /* text-align: center; */
+    font-family: "Optima";
 }
 
 table {
@@ -12,34 +8,35 @@ table {
     margin: 0 auto;
 }
 
-tr {
-    height: 20px;
+
+/* tr {
+     height: 20px; 
 }
 
 td {
-    width: 20px;
-}
+     width: 20px; 
+} */
 
 input[type=number] {
     width: 5em;
     padding: 5px;
     font-size: 15px;
     margin-right: 15px;
-    border: 2px solid rgb(20, 145, 194);;
+    border: 2px solid rgb(20, 145, 194);
 }
 
 input[type=color] {
-    background: #0b4cad; 
-    border: none;
+    background: #ffffff;
+    border: 2;
     border-radius: 5px;
-    width: 40px;
+    width: 30px;
     height: 25px;
-    cursor: pointer;    
+    cursor: pointer;
     -webkit-appearance: none;
     background-color: none;
     margin-bottom: 18px;
-    border-color: #0b4cad;
-  }
+    border-color: #cbcbcb;
+}
 
 .grid {
     margin: 1em auto;
@@ -48,8 +45,8 @@ input[type=color] {
 
 .grid td {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border: 1px solid rgb(0, 0, 0);
     text-align: center;
     font-size: 13px;
@@ -61,99 +58,224 @@ input[type=color] {
 }
 
 h1 {
-    font-weight: 700;
-    color: #F9E609;
-    font-size: 70px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
     margin: 10px;
     -webkit-margin-after: 0.7em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.5%;
+    background-color: rgb(78, 74, 74);
+    /* border-radius: 25px; */
 }
 
 h2 {
-    
-    color: #F4DF09;
-    margin: 15px;
+    color: rgb(94, 93, 91);
 }
 
 .container {
-    margin: 0 auto;
-    padding: 3%;
-    width: 80%;
-    height: auto;
-    background: #000428;  
-    background: -webkit-linear-gradient(to left, #004e92, #000428);  
-    background: linear-gradient(to left, #004e92, #000428);
-
+    padding: 1%;
+    width: 13%;
+    height: 80%;
+    /* box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5); */
+    border: 1px solid #989ea8;
+    /* border-radius: 25px; */
+    float: left;
+    text-align: left;
+    min-width: 10%;
     
-    
-    
-    box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5);
-    border: 7px solid #0d47a1;
-    border-radius: 25px;
 }
 
 #sizePicker {
-    color: #CFEE1B;
+    /* color: #CFEE1B; */
     font-size: 18px;
-    
 }
 
-#btnSubmit, #btnReset  {
-    background-color: rgb(20, 145, 194); 
+#btnSubmit,
+#btnReset {
+    background-color: rgb(115, 118, 119);
     border: 2px solid white;
     color: white;
     padding: 10px 15px;
     text-align: center;
     display: inline-block;
     font-size: 18px;
-    font-family: "comic sans MS";
+    font-family: "Optima";
     cursor: pointer;
     border-radius: 8px;
     margin: 5px;
-    
+    /* box-shadow: inset 2px 3px 111px 16px rgba(145,150,153,0.98); */
 }
 
-#btnSubmit:hover, #btnReset:hover  {
+#btnSubmit:hover,
+#btnReset:hover {
     background-color: rgb(104, 208, 94);
     transform: scale(1.2);
-    
 }
 
-#colorPicker:hover , .color:hover {
-    
+#colorPicker:hover,
+.color:hover {
     transform: scale(1.4);
     cursor: pointer;
 }
 
 .predefined-colors {
     margin: 0 auto 15px auto;
-  }
-  .predefined-colors > div {
+}
+
+.predefined-colors>div {
     display: inline-block;
-    border: 3px solid #0b4cad;
+    border: 3px solid #989ea8;
     border-radius: 5px;
-    width: 40px;    
+    width: 20px;
     height: 20px;
-  }
-  /* Predefined colors set */
-  .predefined-colors .color:nth-child(1) {
+}
+
+
+/* Predefined colors set */
+
+.predefined-colors .color:nth-child(1) {
     background: #f43656;
-  }
-  .predefined-colors .color:nth-child(2) {
+}
+
+.predefined-colors .color:nth-child(2) {
     background: #ffa755fb;
-  }
-  .predefined-colors .color:nth-child(3) {
+}
+
+.predefined-colors .color:nth-child(3) {
     background: #fce303;
-  }
-  .predefined-colors .color:nth-child(4) {
+}
+
+.predefined-colors .color:nth-child(4) {
     background: #23e06c;
-  }
-  .predefined-colors .color:nth-child(5) {
+}
+
+.predefined-colors .color:nth-child(5) {
     background: #4ee7f1;
-  }
-  
+}
+
 .predefined-colors .color:nth-child(6) {
     background: #2a9df5;
-  }
-  .predefined-colors .color:nth-child(7) {
+}
+
+.predefined-colors .color:nth-child(7) {
     background: #917bf5;
-  }
+}
+
+.main_container {
+    width: 100%;
+}
+
+.grid_container {
+    /* box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5); */
+    /* border-radius: 25px; */
+    margin-left: 15%;
+    /* padding-top: 2%; */
+}
+
+.eraserIcon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.eraserText {
+    /* float: right; */
+    font-size: 25px;
+    padding-left: 2.5em;
+    color: rgb(94, 93, 91);
+    cursor: pointer;
+}
+
+.instructions {
+    font-size: 14px;
+}
+
+ol {
+    padding-left: 10px;
+}
+
+.eraserIcon:hover,
+.eraserText:hover {
+    color: rgb(104, 208, 94);
+    transform: scale(1.2);
+}
+
+h4 {
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    #sizePicker {
+        font-size: 15px;
+    }
+    #btnSubmit,
+    #btnReset {
+        padding: 5px;
+        font-size: 13px;
+        margin: 2px;
+    }
+    input[type=number] {
+        width: 3em;
+        font-size: 10px;
+    }
+    .predefined-colors>div {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #989ea8;
+    }
+    input[type=color] {
+        background: #ffffff;
+        border: 2;
+        border-radius: 5px;
+        width: 20px;
+        height: 25px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        background-color: none;
+        margin-bottom: 18px;
+        border-color: #cbcbcb;
+    }
+    .eraserIcon {
+        width: 20px;
+        height: 20px;
+    }
+    .eraserText {
+        font-size: 15px;
+        padding-left: 0.1em;
+        color: rgb(94, 93, 91);
+    }
+    .instructions {
+        font-size: 58%;
+    }
+
+    ol {
+        padding-left: 10px;
+    }
+
+
+    /* .container {
+        padding: 1%;
+        width: 13%;
+        height: 80%;
+        
+    } */
+
+    .grid td {
+        width: 4px;
+        height: 4px;
+        
+    }
+    
+
+
+}
