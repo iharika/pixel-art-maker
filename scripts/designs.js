@@ -28,14 +28,7 @@ $('.predefined-colors').on('click', 'div', function (evt) {
     $('#colorPicker').val(hex);
 });
 
-$(document).ready(function () {
-    $('.grid').remove();
-    inputHeight = $("#input_height").val();
-    inputWidth = $("#input_width").val();
-    var returnedGrid = makeGrid(inputHeight, inputWidth);
-    $('#pixel_canvas').append(returnedGrid);
-    dragAndDrawFeature();
-});
+
 
 
 function rgb2hex(rgb) {
@@ -132,3 +125,57 @@ $(".eraser").click(function () {
 });
 
 
+
+if ( $(window).width() < 768) {     
+    $(document).ready(function () {
+        $('.grid').remove();
+        $("#input_height").val(60);
+        $("#input_width").val(40);
+        inputHeight = $("#input_height").val();
+        inputWidth = $("#input_width").val();
+        var returnedGrid = makeGrid(inputHeight, inputWidth);
+        $('#pixel_canvas').append(returnedGrid);
+        dragAndDrawFeature();
+    });
+}
+else {
+
+    $(document).ready(function () {
+        $('.grid').remove();
+        inputHeight = $("#input_height").val();
+        inputWidth = $("#input_width").val();
+        var returnedGrid = makeGrid(inputHeight, inputWidth);
+        $('#pixel_canvas').append(returnedGrid);
+        dragAndDrawFeature();
+    });
+}
+
+
+$( window ).resize(function() {
+    if ( $(window).width() < 1561) {     
+            $('.grid').remove();
+            $("#input_height").val(60);
+            $("#input_width").val(40);
+            inputHeight = $("#input_height").val();
+            inputWidth = $("#input_width").val();
+            var returnedGrid = makeGrid(inputHeight, inputWidth);
+            $('#pixel_canvas').append(returnedGrid);
+            dragAndDrawFeature();
+        
+    }
+
+    else {
+        
+        $('.grid').remove();
+        $("#input_height").val(50);
+        $("#input_width").val(100);
+        inputHeight = $("#input_height").val();
+        inputWidth = $("#input_width").val();
+        var returnedGrid = makeGrid(inputHeight, inputWidth);
+        $('#pixel_canvas').append(returnedGrid);
+        dragAndDrawFeature();
+    }
+
+
+  });
+  

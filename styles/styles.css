@@ -175,15 +175,15 @@ h2 {
 }
 
 .eraserIcon {
-    float: left;
-    width: 50px;
-    height: 50px;
+    /* float: left; */
+    width: 80px;
+    height: 80px;
     cursor: pointer;
 }
 
 .eraserText {
     /* float: right; */
-    font-size: 25px;
+    font-size: 135%;
     padding-left: 2.5em;
     color: rgb(94, 93, 91);
     cursor: pointer;
@@ -248,8 +248,8 @@ h4 {
         border-color: #cbcbcb;
     }
     .eraserIcon {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
     }
     .eraserText {
         font-size: 60%;
