@@ -6,6 +6,18 @@
 
 var inputHeight, inputWidth, pickedColor;
 
+if ( $(window).width() > 1) {     
+    $(function(){
+$('.instructions_header').click(function(){
+$(this).closest('.container').toggleClass('collapsed');
+});
+});
+//container is expanded on large screen resize or load
+}
+else {
+//container is collapsed on load or screen resize or load
+}
+
 pickedColor = $('#colorPicker').val();
 $('#colorPicker').on('change', function () {
     pickedColor = $('#colorPicker').val();
@@ -118,3 +130,5 @@ $(".eraser").click(function () {
     $('#colorPicker').val('#FFFFFF');
 
 });
+
+

@@ -193,7 +193,7 @@ h2 {
     font-size: 14px;
 }
 
-ol {
+ul {
     padding-left: 10px;
 }
 
@@ -205,28 +205,30 @@ ol {
 
 h4 {
     margin-bottom: 0px;
+    padding-bottom: 15%;
+    font-size: 120%;
 }
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     h1 {
-        font-size: 22px;
+        font-size: 70%;
     }
     h2 {
-        font-size: 12px;
+        font-size: 40%;
     }
     #sizePicker {
-        font-size: 15px;
+        font-size: 60%;
     }
     #btnSubmit,
     #btnReset {
-        padding: 5px;
-        font-size: 13px;
-        margin: 2px;
+        padding: 5%;
+        font-size: 70%;
+        margin: 5%;
     }
     input[type=number] {
-        width: 3em;
-        font-size: 10px;
+        width: 50%;
+        font-size: 80%;
     }
     .predefined-colors>div {
         width: 10px;
@@ -237,12 +239,12 @@ h4 {
         background: #ffffff;
         border: 2;
         border-radius: 5px;
-        width: 20px;
-        height: 25px;
+        width: 15px;
+        height: 20px;
         cursor: pointer;
         -webkit-appearance: none;
         background-color: none;
-        margin-bottom: 18px;
+        margin-bottom: 1px; 
         border-color: #cbcbcb;
     }
     .eraserIcon {
@@ -250,13 +252,11 @@ h4 {
         height: 20px;
     }
     .eraserText {
-        font-size: 15px;
+        font-size: 60%;
         padding-left: 0.1em;
         color: rgb(94, 93, 91);
     }
-    .instructions {
-        font-size: 58%;
-    }
+    
 
     ol {
         padding-left: 10px;
@@ -275,7 +275,41 @@ h4 {
         height: 4px;
         
     }
+
+    .instructions {
+        font-size: 20%;
+    }
+
+    
     
 
 
 }
+
+.instructions_header{
+    background:url('http://cdn1.iconfinder.com/data/icons/vaga/arrow_up.png') no-repeat;
+    background-position:right 0px;
+    cursor:pointer;
+    
+  }
+  
+  .collapsed .instructions_header{
+    background-image:url('http://cdn2.iconfinder.com/data/icons/vaga/arrow_down.png');
+  }
+
+  .collapsed .instructions_body{
+    min-height:0px;
+    height:0px;
+  }
+
+
+  .instructions_body{
+    height:auto;
+    min-height:100px;
+    overflow:hidden;
+    transition:all 0.3s linear;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -ms-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+  }
