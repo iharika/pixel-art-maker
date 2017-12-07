@@ -29,8 +29,8 @@ input[type=color] {
     background: #ffffff;
     border: 2;
     border-radius: 5px;
-    width: 30px;
-    height: 25px;
+    width: 10.5%;
+    height: 28px;
     cursor: pointer;
     -webkit-appearance: none;
     background-color: none;
@@ -97,7 +97,9 @@ h2 {
     background-color: rgb(115, 118, 119);
     border: 2px solid white;
     color: white;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
+        padding: 4% 6%;
+
     text-align: center;
     display: inline-block;
     font-size: 18px;
@@ -128,7 +130,7 @@ h2 {
     display: inline-block;
     border: 3px solid #989ea8;
     border-radius: 5px;
-    width: 20px;
+    width: 8%;
     height: 20px;
 }
 
@@ -280,6 +282,10 @@ h4 {
         font-size: 20%;
     }
 
+    .footer {
+        font-size: 30%;
+    }
+
     
     
 
@@ -313,3 +319,12 @@ h4 {
     -ms-transition:all 0.3s linear;
     -o-transition:all 0.3s linear;
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(146, 146, 146);
+    text-align: right;
+ }

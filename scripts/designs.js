@@ -6,17 +6,17 @@
 
 var inputHeight, inputWidth, pickedColor;
 
-if ( $(window).width() > 1) {     
-    $(function(){
-$('.instructions_header').click(function(){
-$(this).closest('.container').toggleClass('collapsed');
-});
-});
-//container is expanded on large screen resize or load
+if ($(window).width() > 1) {
+    $(function () {
+        $('.instructions_header').closest('.container').addClass('collapsed');
+        
+        $('.instructions_header').click(function () {
+            $(this).closest('.container').toggleClass('collapsed');
+        });
+    });
+    //container is expanded on large screen resize or load
 }
-else {
-//container is collapsed on load or screen resize or load
-}
+
 
 pickedColor = $('#colorPicker').val();
 $('#colorPicker').on('change', function () {
@@ -126,8 +126,9 @@ $(".eraser").click(function () {
 
 
 
-if ( $(window).width() < 768) {     
-    $(document).ready(function () {
+$(document).ready(function () {
+
+    if ($(window).width() <= 768) {
         $('.grid').remove();
         $("#input_height").val(60);
         $("#input_width").val(40);
@@ -136,36 +137,31 @@ if ( $(window).width() < 768) {
         var returnedGrid = makeGrid(inputHeight, inputWidth);
         $('#pixel_canvas').append(returnedGrid);
         dragAndDrawFeature();
-    });
-}
-else {
-
-    $(document).ready(function () {
+    } else {
         $('.grid').remove();
         inputHeight = $("#input_height").val();
         inputWidth = $("#input_width").val();
         var returnedGrid = makeGrid(inputHeight, inputWidth);
         $('#pixel_canvas').append(returnedGrid);
         dragAndDrawFeature();
-    });
-}
-
-
-$( window ).resize(function() {
-    if ( $(window).width() < 1561) {     
-            $('.grid').remove();
-            $("#input_height").val(60);
-            $("#input_width").val(40);
-            inputHeight = $("#input_height").val();
-            inputWidth = $("#input_width").val();
-            var returnedGrid = makeGrid(inputHeight, inputWidth);
-            $('#pixel_canvas').append(returnedGrid);
-            dragAndDrawFeature();
-        
     }
 
-    else {
-        
+});
+
+
+$(window).resize(function () {
+    if ($(window).width() < 1561) {
+        $('.grid').remove();
+        $("#input_height").val(60);
+        $("#input_width").val(40);
+        inputHeight = $("#input_height").val();
+        inputWidth = $("#input_width").val();
+        var returnedGrid = makeGrid(inputHeight, inputWidth);
+        $('#pixel_canvas').append(returnedGrid);
+        dragAndDrawFeature();
+
+    } else {
+
         $('.grid').remove();
         $("#input_height").val(50);
         $("#input_width").val(100);
@@ -177,5 +173,4 @@ $( window ).resize(function() {
     }
 
 
-  });
-  
+});
