@@ -82,35 +82,6 @@ function dragAndDrawFeature() {
 
 }
 
-/* This function defines the kind of grid drawn when page is initially loaded depending on screen size
-60x40 HxW size grid is drawn when window width is less than or equal to 768 (for smaller screens like mobile phones) and
-50x100 HxW (default values) size grid is drawn in all other cases */
-$(document).ready(function () {
-
-    if ($(window).width() <= 768) {
-        $('.grid').remove();
-        $("#input_height").val(60);
-        $("#input_width").val(40);
-        inputHeight = $("#input_height").val();
-        inputWidth = $("#input_width").val();
-        var returnedGrid = makeGrid(inputHeight, inputWidth);
-        $('#pixel_canvas').append(returnedGrid);
-        dragAndDrawFeature();
-    } else {
-        $('.grid').remove();
-        inputHeight = $("#input_height").val();
-        inputWidth = $("#input_width").val();
-        var returnedGrid = makeGrid(inputHeight, inputWidth);
-        $('#pixel_canvas').append(returnedGrid);
-        dragAndDrawFeature();
-    }
-    $('.instructions_header').closest('.container').addClass('collapsed');
-    $('.instructions_header').click(function () {
-        $(this).closest('.container').toggleClass('collapsed');
-    });
-
-});
-
 
 $('.predefined-colors').on('click', 'div', function (evt) {
     var pickedColor = $(evt.target).css("background-color");
@@ -137,3 +108,31 @@ $(".eraser").click(function () {
 
 });
 
+/* This function defines the kind of grid drawn when page is initially loaded depending on screen size
+60x40 HxW size grid is drawn when window width is less than or equal to 768 (for smaller screens like mobile phones) and
+50x100 HxW (default values) size grid is drawn in all other cases */
+$(document).ready(function () {
+    
+        if ($(window).width() <= 768) {
+            $('.grid').remove();
+            $("#input_height").val(60);
+            $("#input_width").val(40);
+            inputHeight = $("#input_height").val();
+            inputWidth = $("#input_width").val();
+            var returnedGrid = makeGrid(inputHeight, inputWidth);
+            $('#pixel_canvas').append(returnedGrid);
+            dragAndDrawFeature();
+        } else {
+            $('.grid').remove();
+            inputHeight = $("#input_height").val();
+            inputWidth = $("#input_width").val();
+            var returnedGrid = makeGrid(inputHeight, inputWidth);
+            $('#pixel_canvas').append(returnedGrid);
+            dragAndDrawFeature();
+        }
+        $('.instructions_header').closest('.container').addClass('collapsed');
+        $('.instructions_header').click(function () {
+            $(this).closest('.container').toggleClass('collapsed');
+        });
+    
+    });

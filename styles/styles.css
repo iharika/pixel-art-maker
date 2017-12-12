@@ -1,5 +1,4 @@
 body {
-    /* text-align: center; */
     font-family: "Optima";
 }
 
@@ -9,13 +8,6 @@ table {
 }
 
 
-/* tr {
-     height: 20px; 
-}
-
-td {
-     width: 20px; 
-} */
 
 input[type=number] {
     width: 5em;
@@ -78,9 +70,7 @@ h2 {
     padding: 1%;
     width: 13%;
     height: 80%;
-    /* box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5); */
     border: 1px solid #989ea8;
-    /* border-radius: 25px; */
     float: left;
     text-align: left;
     min-width: 10%;
@@ -88,7 +78,6 @@ h2 {
 }
 
 #sizePicker {
-    /* color: #CFEE1B; */
     font-size: 18px;
 }
 
@@ -97,7 +86,6 @@ h2 {
     background-color: rgb(115, 118, 119);
     border: 2px solid white;
     color: white;
-    /* padding: 10px 15px; */
         padding: 4% 6%;
 
     text-align: center;
@@ -107,7 +95,6 @@ h2 {
     cursor: pointer;
     border-radius: 8px;
     margin: 5px;
-    /* box-shadow: inset 2px 3px 111px 16px rgba(145,150,153,0.98); */
 }
 
 #btnSubmit:hover,
@@ -170,21 +157,16 @@ h2 {
 }
 
 .grid_container {
-    /* box-shadow: 0 5px 15px 5px rgba(15, 15, 15, 0.5); */
-    /* border-radius: 25px; */
     margin-left: 15%;
-    /* padding-top: 2%; */
 }
 
 .eraserIcon {
-    /* float: left; */
     width: 80px;
     height: 80px;
     cursor: pointer;
 }
 
 .eraserText {
-    /* float: right; */
     font-size: 135%;
     padding-left: 2.5em;
     color: rgb(94, 93, 91);
@@ -265,13 +247,6 @@ h4 {
     }
 
 
-    /* .container {
-        padding: 1%;
-        width: 13%;
-        height: 80%;
-        
-    } */
-
     .grid td {
         width: 4px;
         height: 4px;
@@ -286,7 +261,6 @@ h4 {
         font-size: 30%;
     }
 
-    
     
 
 
